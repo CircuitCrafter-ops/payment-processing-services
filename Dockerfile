@@ -1,6 +1,6 @@
 FROM node:20-alpine
 
-WORKDIR /app/api-gateway
+WORKDIR /app/notification-service
 
 RUN npm install -g pnpm
 
@@ -12,6 +12,6 @@ COPY . .
 
 RUN pnpm run build
 
-EXPOSE 3000
+EXPOSE 5000
 
 CMD [ "node", "dist/server.js" ]
