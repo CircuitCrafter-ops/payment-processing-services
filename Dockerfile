@@ -1,6 +1,6 @@
 FROM node:20-alpine
 
-WORKDIR /app/notification-service
+WORKDIR /app/payment-service
 
 RUN npm install -g pnpm
 
@@ -12,6 +12,6 @@ COPY . .
 
 RUN pnpm run build
 
-EXPOSE 5000
+EXPOSE 4000
 
 CMD [ "node", "dist/server.js" ]
